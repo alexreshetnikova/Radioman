@@ -7,15 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RadioTest {
      Radio radio = new Radio();
 
-    @Test
+   @Test
     public void shouldSetMaxStation() {
-        radio.setMaxStation(12);
+        Radio radio = new Radio(12);
         assertEquals(12, radio.getMaxStation());
     }
 
     @Test
     public void shouldIncreaseWithNewMaxStation() {
-        radio.setMaxStation(12);
+        Radio radio = new Radio(12);
         radio.setCurrentStation(10);
         radio.increaseCurrentStation();
         assertEquals(11, radio.getCurrentStation());
